@@ -35,6 +35,6 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %{_bindir}/listres
-%{_mandir}/man1/listres.1x.bz2
+%{_mandir}/man1/listres.*
 
 
