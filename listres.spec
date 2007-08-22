@@ -1,23 +1,27 @@
-Name: listres
-Version: 1.0.1
-Release: %mkrel 5
-Summary: List resources in widgets
-Group: Development/X11
-Source: http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
-License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
+%define name	listres
+%define version	1.0.1
+%define release	%mkrel 6
 
-BuildRequires: libx11-devel >= 1.0.0
-BuildRequires: libxmu-devel >= 1.0.0
-BuildRequires: libxt-devel >= 1.0.0
-BuildRequires: libxaw-devel >= 1.0.1
-BuildRequires: x11-util-macros >= 1.0.1
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:	List resources in widgets
+Group:		Development/X11
+Source:		http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+License:	MIT
+BuildRoot:	%{_tmppath}/%{name}-root
+
+BuildRequires:	libx11-devel >= 1.0.0
+BuildRequires:	libxmu-devel >= 1.0.0
+BuildRequires:	libxt-devel >= 1.0.0
+BuildRequires:	libxaw-devel >= 1.0.1
+BuildRequires:	x11-util-macros >= 1.0.1
 
 %description
 The listres program generates a list of a widget's resource database.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %configure2_5x	--x-includes=%{_includedir}\
@@ -36,5 +40,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_bindir}/listres
 %{_mandir}/man1/listres.*
-
 
