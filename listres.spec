@@ -1,6 +1,6 @@
 %define name	listres
 %define version	1.0.1
-%define release	%mkrel 6
+%define release	%mkrel 7
 
 Name:		%{name}
 Version:	%{version}
@@ -24,6 +24,7 @@ The listres program generates a list of a widget's resource database.
 %setup -q
 
 %build
+autoreconf -ifs
 %configure2_5x	--x-includes=%{_includedir}\
 		--x-libraries=%{_libdir}
 
