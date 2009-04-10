@@ -24,10 +24,7 @@ The listres program generates a list of a widget's resource database.
 %setup -q
 
 %build
-autoreconf -ifs
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure2_5x
 %make
 
 %install
