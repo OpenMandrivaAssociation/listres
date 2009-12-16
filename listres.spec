@@ -1,6 +1,6 @@
 %define name	listres
-%define version	1.0.1
-%define release	%mkrel 12
+%define version	1.0.2
+%define release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
