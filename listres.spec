@@ -1,17 +1,17 @@
+Summary:	List resources in widgets
 Name:		listres
 Version:	1.0.3
 Release:	1
-Summary:	List resources in widgets
 Group:		Development/X11
 License:	MIT
-URL:		http://xorg.freedesktop.org
+Url:		http://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
 BuildRequires:	pkgconfig(xmu)
+BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xt)
-BuildRequires:	x11-util-macros
 
 %description
 The listres program generates a list of a widget's resource database.
