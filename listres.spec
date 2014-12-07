@@ -1,7 +1,7 @@
 Summary:	List resources in widgets
 Name:		listres
 Version:	1.0.3
-Release:	7
+Release:	8
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
