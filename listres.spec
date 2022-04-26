@@ -1,11 +1,11 @@
 Summary:	List resources in widgets
 Name:		listres
-Version:	1.0.4
-Release:	2
+Version:	1.0.5
+Release:	1
 Group:		Development/X11
 License:	MIT
 Url:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/app/%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xaw7)
@@ -17,16 +17,16 @@ BuildRequires:	pkgconfig(xt)
 The listres program generates a list of a widget's resource database.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%configure2_5x
-%make
+%configure
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_bindir}/listres
-%{_mandir}/man1/listres.*
+%doc %{_mandir}/man1/listres.*
 
